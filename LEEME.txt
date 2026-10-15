@@ -1,0 +1,3 @@
+Coloca aqui los JAR necesarios (Tomcat 9 / Java EE):
+  - jstl-1.2.jar
+(Tomcat 10+ usa Jakarta: cambia las URI a jakarta.tags.core y usa jakarta.servlet.jsp.jstl-*.jar)

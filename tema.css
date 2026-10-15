@@ -1,0 +1,38 @@
+:root{--bg:#0f172a;--panel:#1e293b;--borde:#334155;--texto:#e2e8f0;--suave:#94a3b8;
+--acento:#2dd4bf;--acento2:#818cf8;--error:#f87171;--ok:#4ade80}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--texto)}
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+aside{background:#0b1220;border-right:1px solid var(--borde);padding:24px 16px;position:sticky;top:0;height:100vh;overflow:auto}
+aside h1{font-size:1.15rem;margin:0 0 4px;color:var(--acento)}
+aside small{color:var(--suave)}
+aside nav{margin-top:22px;display:flex;flex-direction:column;gap:4px}
+aside a{color:var(--suave);text-decoration:none;padding:9px 12px;border-radius:8px;font-size:.92rem}
+aside a:hover{background:var(--panel);color:var(--texto)}
+aside a.activo{background:linear-gradient(90deg,var(--acento2),var(--acento));color:#0b1220;font-weight:600}
+main{padding:40px min(6vw,70px);max-width:900px}
+h2{margin:0 0 6px;font-size:1.8rem}
+.sub{color:var(--suave);margin:0 0 26px}
+.card{background:var(--panel);border:1px solid var(--borde);border-radius:14px;padding:22px;margin-bottom:20px}
+.card h3{margin:0 0 12px;font-size:1rem;color:var(--acento2);text-transform:uppercase;letter-spacing:.06em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.tile{display:block;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--borde);border-radius:14px;padding:20px;transition:.15s}
+.tile:hover{transform:translateY(-3px);border-color:var(--acento)}
+.tile b{display:block;color:var(--acento);font-size:.8rem;margin-bottom:6px}
+.tile span{color:var(--suave);font-size:.9rem}
+label{display:block;margin:12px 0 5px;font-size:.88rem;color:var(--suave)}
+input,select{width:100%;padding:10px 12px;border-radius:8px;border:1px solid var(--borde);background:var(--bg);color:var(--texto);font-size:1rem}
+input:focus,select:focus{outline:2px solid var(--acento2)}
+.btn{display:inline-block;margin-top:16px;padding:10px 20px;border:0;border-radius:8px;background:var(--acento);color:#0b1220;font-weight:700;cursor:pointer;text-decoration:none;font-size:.95rem}
+.btn.sec{background:var(--borde);color:var(--texto)}
+.fila{display:flex;gap:10px;flex-wrap:wrap}
+.aviso{padding:12px 16px;border-radius:8px;margin:12px 0;border-left:4px solid}
+.aviso.error{background:#3b1d24;border-color:var(--error)}
+.aviso.ok{background:#12301f;border-color:var(--ok)}
+.aviso.info{background:#1c2547;border-color:var(--acento2)}
+code{background:var(--bg);padding:2px 7px;border-radius:5px;color:var(--acento)}
+.chip{display:inline-block;background:var(--bg);border:1px solid var(--borde);padding:5px 12px;border-radius:99px;margin:3px}
+.chip.hl{border-color:var(--acento);color:var(--acento)}
+table{width:100%;border-collapse:collapse}
+td,th{padding:8px 10px;border-bottom:1px solid var(--borde);text-align:left}
+@media(max-width:760px){.layout{grid-template-columns:1fr}aside{position:static;height:auto}}

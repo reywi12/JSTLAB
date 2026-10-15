@@ -1,0 +1,26 @@
+<%@ page pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${titulo} · JSTL Lab</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/tema.css">
+</head>
+<body>
+<div class="layout">
+<aside>
+  <h1>⚡ JSTL Lab</h1><small>Programación en Java</small>
+  <nav>
+    <a class="${activo == 'inicio' ? 'activo' : ''}" href="${pageContext.request.contextPath}/index.jsp">Inicio</a>
+    <a class="${activo == 'e1' ? 'activo' : ''}" href="${pageContext.request.contextPath}/Eje1.jsp">1 · Primer Ejercicio</a>
+    <a class="${activo == 'e2' ? 'activo' : ''}" href="${pageContext.request.contextPath}/Datos.jsp">2 · Datos</a>
+    <a class="${activo == 'e3' ? 'activo' : ''}" href="${pageContext.request.contextPath}/set1.jsp">3 · Uso del set</a>
+    <a class="${activo == 'e4' ? 'activo' : ''}" href="${pageContext.request.contextPath}/Datosif.jsp">4 · Datosif</a>
+    <a class="${activo == 'e5' ? 'activo' : ''}" href="${pageContext.request.contextPath}/Lenguaje.jsp">5 · Lenguaje</a>
+    <a class="${activo == 'e6' ? 'activo' : ''}" href="${pageContext.request.contextPath}/catch.jsp">6 · Catch</a>
+    <a class="${activo == 'e7' ? 'activo' : ''}" href="${pageContext.request.contextPath}/foreach.jsp">7 · Foreach</a>
+    <a class="${activo == 'e8' ? 'activo' : ''}" href="${pageContext.request.contextPath}/ForTokens.jsp">8 · ForTokens</a>
+  </nav>
+</aside>
+<main>
